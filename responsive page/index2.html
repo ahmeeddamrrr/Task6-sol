@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let salary = prompt("Enter your total salary:");
+
+      salary =parseFloat(salary);
+
+      let taxPct = 0;
+      let taxAmount = 0;
+      if (salary <= 2000) {
+        taxPct = 10;
+        taxAmount = salary * 0.1;
+      } else if (salary <= 5000) {
+        taxPct = 15;
+        taxAmount = salary * 0.15;
+      } else if (salary <= 10000) {
+        taxPct = 20;
+        taxAmount = salary * 0.2;
+      } else {
+        taxPct = 25;
+        taxAmount = salary * 0.25;
+      }
+
+      let netSalary = salary - taxAmount;
+
+      document.write("Total salary: " + salary + " L.E.");
+      document.write("Tax percentage: " + taxPct + "%");
+      document.write("Tax amount: " + taxAmount + " L.E.");
+      document.write("Net salary: " + netSalary + " L.E.");
+      console.log("Total salary: " + salary + " L.E.");
+      console.log("Tax percentage: " + taxPct + "%");
+      console.log("Tax amount: " + taxAmount + " L.E.");
+      console.log("Net salary: " + netSalary + " L.E.");
+    </script>
+  </body>
+</html>
